@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+/* NavLink -> one special behavior. If add the className prop to it, its actually not 
+the regular */
+import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 
 function MainNavigation() {
@@ -7,10 +9,29 @@ function MainNavigation() {
       <mav>
         <ul className={classes.list}>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              /* className -> takes a function, that function should return a className that should be 
+                added to the anchor tag. That function also automatically recieves an object from which we 
+                can destructure the isActive property. */
+              /* boolean -> if true -> led to the currently active route. So, can use isActive to 
+              conditionally return css classes. */
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <NavLink
+              to="/products"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Products
+            </NavLink>
           </li>
         </ul>
       </mav>
