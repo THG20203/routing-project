@@ -19,6 +19,9 @@ function MainNavigation() {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
+              /* end prop indicates this link "/" should only be considered active if the currently active
+              route ends with this path after the url */
+              end
             >
               Home
             </NavLink>
