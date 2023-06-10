@@ -4,7 +4,7 @@ import ProductsPage from "./pages/product";
 
 // path is part after the domain.
 
-// createBrowserRouter - provide objects -> every object respresents one route
+// createBrowserRouter - provide objects -> every object within array respresents one route
 const router = createBrowserRouter([
   // add some properties to define the characteristics like the path -> route should be activated
   // second part of property -> which component should be loaded when path = active
