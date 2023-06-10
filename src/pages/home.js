@@ -3,6 +3,7 @@ cause under the hood it renders anchor element, but listens for clicks on that e
 the browser default of sending an https request if the link is clicked, and instead takes a look at 
 the router definitions to update page accordingly, load appropriate content. */
 import { Link } from "react-router-dom";
+import MainNavigation from "../components/MainNavigation";
 
 function HomePage() {
   return (
