@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home";
+import ProductsPage from "./pages/product";
 
 // path is part after the domain.
 
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
   element property -> define the element (the jsx code) that should be loaded when the path next to it
   is active */
   { path: "/", element: <HomePage /> },
+  { path: "/products", element: <ProductsPage /> },
 ]);
 
 function App() {
