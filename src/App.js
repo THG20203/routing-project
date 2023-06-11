@@ -23,11 +23,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
-      // always want to display Product Detail page hence defining it as an element
-      { path: "/products/product-1", element: <ProductDetailPage /> },
-      // could load multiple paths like this - now with three route definitions
-      { path: "/products/product-2", element: <ProductDetailPage /> },
-      { path: "/products/product-3", element: <ProductDetailPage /> },
+      /* always want to display Product Detail page hence defining it as an element, but want to
+      define dynamic path segments / path parameters. : signals to react-router-dom that this part
+      of the path is dynamic */
+      { path: "/products/:productId", element: <ProductDetailPage /> },
     ],
   },
 ]);
