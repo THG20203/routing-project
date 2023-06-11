@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/error";
 import HomePage from "./pages/home";
 import ProductsPage from "./pages/product";
+import ProductDetailPage from "./pages/productdetail";
 import RootLayout from "./pages/Root";
 
 // path is part after the domain.
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
+      // always want to display Product Detail page hence defining it as an element
+      { path: "/products/product-1", element: <ProductDetailPage /> },
+      // could load multiple paths like this - now with three route definitions
+      { path: "/products/product-2", element: <ProductDetailPage /> },
+      { path: "/products/product-3", element: <ProductDetailPage /> },
     ],
   },
 ]);

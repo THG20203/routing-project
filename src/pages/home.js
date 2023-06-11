@@ -18,7 +18,7 @@ function HomePage() {
         Go to <Link to="/products">The list of products.</Link>
       </p>
       <p>
-        <button onClick={navigateHandler}>Navigate</button>
+        <button onClick={navigateHandler}>Products</button>
       </p>
     </>
   );
