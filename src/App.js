@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "", element: <HomePage /> },
+      { index: true, element: <HomePage /> },
       { path: "products", element: <ProductsPage /> },
       /* always want to display Product Detail page hence defining it as an element, but want to
       define dynamic path segments / path parameters. : signals to react-router-dom that this part
