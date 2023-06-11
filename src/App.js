@@ -17,16 +17,16 @@ const router = createBrowserRouter([
   /* extra route, with 'nothing' path, with element that loads the layout wrapper that should be
   wrapped around the other routes. To wrap other routes, need another special property */
   {
-    path: "/",
+    path: "/root",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <HomePage /> },
-      { path: "/products", element: <ProductsPage /> },
+      { path: "", element: <HomePage /> },
+      { path: "products", element: <ProductsPage /> },
       /* always want to display Product Detail page hence defining it as an element, but want to
       define dynamic path segments / path parameters. : signals to react-router-dom that this part
       of the path is dynamic */
-      { path: "/products/:productId", element: <ProductDetailPage /> },
+      { path: "products/:productId", element: <ProductDetailPage /> },
     ],
   },
 ]);
