@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   /* extra route, with 'nothing' path, with element that loads the layout wrapper that should be
   wrapped around the other routes. To wrap other routes, need another special property */
   {
-    path: "/root",
+    path: "/",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [

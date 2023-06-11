@@ -16,10 +16,7 @@ function ProductsPage() {
       <ul>
         {PRODUCTS.map((prod) => (
           <li key={prod.id}>
-            {/* within link to, have a dynamic value, where we construct a string dynamically, by using
-            backticks, so that we build such a javascript template literal, which makes it easier to 
-            inject dynamic values into this string. */}
-            <Link to={`/products/${prod.id}`}>{prod.title}</Link>
+            <Link to={prod.id}>{prod.title}</Link>
           </li>
         ))}
       </ul>
